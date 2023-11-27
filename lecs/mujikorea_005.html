@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>CkEditor5 샘플</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" type="text/css" href="https://www.mujikorea.net/css/muji.css?ver=20230915" />
+		<link rel="stylesheet" type="text/css" href="https://www.mujikorea.net/css/store/store.css?ver=20231024" />
+		<script type="text/javascript" src="https://www.mujikorea.net/js/jquery-1.7.2.min.js"></script>
+		<style>
+			.center {
+			 	display: flex;
+				flex-direction: column;
+			}
+			.center > p {
+				text-align: center;
+				justify-content: center;
+			}
+		</style>
+
+		<script>
+			function replaceElementTag(targetSelector, newTagString) {
+				$(targetSelector).each(function(){
+					var newElem = $(newTagString, {html: $(this).html()});
+					$.each(this.attributes, function() {
+						newElem.attr(this.name, this.value);
+					});
+					$(this).replaceWith(newElem);
+				});
+			}
+
+			$(document).ready(function(){
+				$.get('./mujikorea_005_content.html', function(data) {
+					$('#cke5-user-interface-classic-demo').html(data);
+
+					$('#cke5-user-interface-classic-demo center').each(function(){
+						$(this).children().each( function() {
+							$( this ).wrapAll("<p></p>");
+						} );
+					});
+
+
+					$('#cke5-user-interface-classic-demo center').addClass('center')
+
+					replaceElementTag('#cke5-user-interface-classic-demo center', '<div></div>');
+					console.log($('#cke5-user-interface-classic-demo').html())
+					initializeCkeditor();
+				});
+
+				/*
+				if($("#artc").length>0){
+					var artcInfo = $("#preArtc").html();
+					$("#preArtc").remove();
+					$("#artc").html(artcInfo);
+				}
+				 */
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="header-wrapper">
+			<h1>무지 5. 작은이미지(센터정렬 태그) - https://www.mujikorea.net/display/showDisplay.lecs?goodsNo=MJ31150556</h1>
+		</div>
+		<div class="editor-wrapper">
+			<div id="cke5-user-interface-classic-demo">
+			</div>
+		</div>
+
+		<script src="https://cdn.ckbox.io/CKBox/2.0.0/ckbox.js"></script>
+		<script src="./dist/main.js"></script>
+	</body>
+</html>

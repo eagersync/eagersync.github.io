@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>CkEditor5 샘플</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- common style -->
+		<link rel="stylesheet" href="https://mall.lottechilsung.co.kr/css/base.css?ver=20201101">
+		<link rel="stylesheet" href="https://mall.lottechilsung.co.kr/css/common.css?ver=20230808">
+		<!-- contents style -->
+		<link rel="stylesheet" href="https://mall.lottechilsung.co.kr/css/contents.css?ver=20231024">
+
+		<script type="text/javascript" src="https://www.mujikorea.net/js/jquery-1.7.2.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				$.get('./lottechilsung_003_content.html', function(data) {
+					$('#cke5-user-interface-classic-demo').html(data);
+					initializeCkeditor();
+				});
+
+				/*
+				if($("#artc").length>0){
+					var artcInfo = $("#preArtc").html();
+					$("#preArtc").remove();
+					$("#artc").html(artcInfo);
+				}
+				 */
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="header-wrapper">
+			<h1>칠성 3. 링크&동영상 - https://mall.lottechilsung.co.kr/display/showDisplay.lecs?goodsNo=CF31154836&displayNo=CF1A01A09</h1>
+		</div>
+		<div class="editor-wrapper">
+			<div id="cke5-user-interface-classic-demo">
+				<div class="user_con mgb30">
+				<h5>제품 정보</h5>
+				<dl>
+					<div id="preArtc">
+						<dt>제품 소재</dt>
+						<dd>발수 · 겉감:나일론100% 안감:폴리에스터100% 충전재:폴리에스터100% 파이핑:나일론94% 폴리우레탄6%</dd>
+						<dt>색상</dt>
+						<dd>상단참조</dd>
+						<dt>치수</dt>
+						<dd>하단참조</dd>
+						<dt>제조자, 수입자</dt>
+						<dd>양품계획/무인양품㈜</dd>
+						<dt>제조국</dt>
+						<dd>미얀마</dd>
+						<dt>세탁방법 및 취급시 주의사항</dt>
+						<dd>짙은 색상 제품은 사용 중 마찰이나 젖은 상태에서의 접촉으로 이염될 수 있습니다. 세탁할 때는 단독 세탁하여 주시기 바랍니다. <br>발수(물을 튕기기 쉬운 성질) 세탁, 클리닝에 의해 서서히 발수 효과가 사라집니다. <br>이 상품은 발수성이 오래 유지되도록 가공하였으나 세탁 및 클리닝을 반하면 서서히 효과가 저하됩니다. <br>마찰, 유분 등 오염이 묻은 상태로 착용하면 발수성이 저하될 수 있으니 주의하십시오. <br>세탁 30회까지 효과가 있는 것으로 확인되었습니다(세탁 조건에 따라 다릅니다). <br>방수 제품은 아닙니다.</dd>
+						<dt>제조연월</dt>
+						<dd>202306</dd>
+						<dt>품질보증기준</dt>
+						<dd>관련법 및 소비자분쟁해결 기준에 따름</dd>
+						<dt>A/S 책임자와 전화번호</dt>
+						<dd>무인양품 1577-2892</dd>
+					</div>
+				</dl>
+				가볍고 따뜻한 안솜을 사용했습니다. 겉감은 세탁을 반해도 발수성이 오래가는 가공을 한 소재입니다.<dl><div id="artc"></div></dl><dl><dt>사이즈</dt>
+
+						<table summary="***의 사이즈표" border="1px" >
+						<colgroup>
+							<col style="width:30%"/>
+							<col style="width:14%" />
+							<col style="width:14%" />
+							<col style="width:14%" />
+							<col style="width:14%" />
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">구분</th>
+							<th scope="col">기장</th>
+							<th scope="col">어깨폭</th>
+							<th scope="col">가슴둘레</th>
+							<th scope="col">밑단둘레</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th scope="row">S</th>
+							<td>  66cm  </td>
+							<td>  42 cm  </td>
+							<td>  119 cm  </td>
+							<td>  113 cm  </td>
+						</tr>
+						<tr>
+							<th scope="row">M </th>
+							<td>  68.5 cm  </td>
+							<td>  45 cm  </td>
+							<td>  125 cm  </td>
+							<td>  119 cm  </td>
+						</tr>
+						<tr>
+							<th scope="row">L </th>
+							<td>  71 cm  </td>
+							<td>  48 cm  </td>
+							<td>  131 cm  </td>
+							<td>  125 cm  </td>
+						</tr>
+						<tr>
+							<th scope="row">XL </th>
+							<td>  73.5 cm  </td>
+							<td>  51 cm  </td>
+							<td>  137 cm  </td>
+							<td>  131 cm  </td>
+						</tr>
+						</tbody>
+					</table>
+
+					<!-- 2016.03.15. [smartchecker-774] 품목정보 23 - 어린이제품인 경우 문구 노출 -->
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.ckbox.io/CKBox/2.0.0/ckbox.js"></script>
+		<script src="./dist/main.js"></script>
+	</body>
+</html>
