@@ -6,8 +6,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>CkEditor5 샘플</title>
+		<title>베이직인터네셔널 LECS Ckeditor5 예제</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="shortcut icon" href="https://basicit.co.kr/img/assets/favicon.png">
+		<link rel="stylesheet" type="text/css" href="./common.css">
 
 		<link rel="stylesheet" type="text/css" href="https://www.mujikorea.net/css/muji.css?ver=20230915" />
 		<link rel="stylesheet" type="text/css" href="https://www.mujikorea.net/css/store/store.css?ver=20231024" />
@@ -36,19 +38,19 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 
 			$(document).ready(function(){
 				$.get('./mujikorea_005_content.html', function(data) {
-					$('#cke5-user-interface-classic-demo').html(data);
+					$('#concentrix-lecs-ckeditor').html(data);
 
-					$('#cke5-user-interface-classic-demo center').each(function(){
+					$('#concentrix-lecs-ckeditor center').each(function(){
 						$(this).children().each( function() {
 							$( this ).wrapAll("<p></p>");
 						} );
 					});
 
 
-					$('#cke5-user-interface-classic-demo center').addClass('center')
+					$('#concentrix-lecs-ckeditor center').addClass('center')
 
-					replaceElementTag('#cke5-user-interface-classic-demo center', '<div></div>');
-					console.log($('#cke5-user-interface-classic-demo').html())
+					replaceElementTag('#concentrix-lecs-ckeditor center', '<div></div>');
+					console.log($('#concentrix-lecs-ckeditor').html())
 					initializeCkeditor();
 				});
 
@@ -65,10 +67,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 
 	<body>
 		<div class="header-wrapper">
-			<h1>무지 5. 작은이미지(센터정렬 태그) - https://www.mujikorea.net/display/showDisplay.lecs?goodsNo=MJ31150556</h1>
+			<h1><a href="https://www.mujikorea.net/display/showDisplay.lecs?goodsNo=MJ31150556" target='_blank'	>무지 5. 작은이미지(센터정렬 태그)</a></h1>
 		</div>
 		<div class="editor-wrapper">
-			<div id="cke5-user-interface-classic-demo">
+			<div id="concentrix-lecs-ckeditor">
 			</div>
 		</div>
 

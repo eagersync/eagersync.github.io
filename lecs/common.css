@@ -1,0 +1,52 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table > thead > tr > th {
+    background-color: rgb(128, 128, 128);
+}
+
+table > tbody > tr > td:first-child {
+    background-color: rgb(128, 128, 128);
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+    text-decoration-line: underline !important;;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+    text-decoration-line: underline !important;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+.ck.ck-editor{
+    max-width: 850px;
+}
