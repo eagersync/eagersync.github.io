@@ -3112,7 +3112,7 @@ nav a {cursor: pointer}
 		box-shadow: 0 0 50px 0 rgba(0,0,0,0.1);
 	}
 	nav .nav {
-		height: 68px;
+		height: 60px;
 		-webkit-transition: height 0.3s;
 		-moz-transition: height 0.3s;
 		transition: height 0.3s;
@@ -3400,6 +3400,7 @@ nav.navbar.nav-small {
 }
 .navbar-brand {
 	padding: 0;
+	top: 10px;
 }
 .navbar-brand img {
 	max-height: 68px;
@@ -3413,7 +3414,7 @@ nav.navbar.nav-small {
 	font-size: 17px;
 	font-weight: 700;
 	letter-spacing: 1px;
-	padding: 16px 11px 14px 11px;
+	padding: 0 11px;
 	-webkit-transition: color .3s, opacity .3s;
 	-moz-transition: color .3s, opacity .3s;
 	transition: color .3s, opacity .3s;
@@ -3644,7 +3645,7 @@ nav.navbar.nav-small {
 	}
 	.navbar-header {
 		float: none;
-		padding: 3px 0 3px 0;
+		padding: 0 0;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 		box-shadow: 0 0 50px 0 rgba(0,0,0,0.1);
 	}
@@ -3660,6 +3661,8 @@ nav.navbar.nav-small {
 	.navbar>.container .navbar-brand,
 	.navbar>.container-fluid .navbar-brand {
 		margin-left: 0;
+		position: relative;
+		top: 6px;
 	}
 	.navbar-brand img.logo-light {
 		display: none;
@@ -4747,4 +4750,20 @@ ul {
 	cursor: default;
 	color: #35383c;
 	opacity: 1;
+}
+
+
+.aticle_txt{
+	
+line-height: 1.5;
+}
+
+.aticle_txt h2{
+    line-height: 1.3;
+    word-break: keep-all;
+    font-weight: 500;
+}
+.aticle_txt p{
+    line-height: 1.5;
+    word-break: keep-all;
 }
